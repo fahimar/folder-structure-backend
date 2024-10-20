@@ -1,11 +1,11 @@
 import request from "supertest";
-import app from "../app"; // Import your app
+import app from "../app";
 
 describe("Folder API Tests", () => {
   it("should fetch all folders", async () => {
     const res = await request(app).get("/api/folders");
     expect(res.statusCode).toEqual(200);
-    expect(res.body).toBeInstanceOf(Array); // Expecting an array of folders
+    expect(res.body).toBeInstanceOf(Array);
   });
 
   it("should create a new folder", async () => {
